@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription — RDV-MEDICAL CI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="index.html">✚ RDV-MEDICAL <span>CI</span></a>
+      <nav id="nav" aria-label="Navigation principale"></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="card auth">
+        <h2>Créer un compte</h2>
+        <div id="msg" aria-live="polite"></div>
+        <form id="auth" data-mode="inscription">
+          <div class="field"><label for="nom">Nom et prénom</label><input id="nom" name="nom" autocomplete="name" required minlength="2" maxlength="100"></div>
+          <div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" autocomplete="tel" required placeholder="+225 07 00 00 00 00"></div>
+          <div class="field"><label for="mot_de_passe">Mot de passe (8 caractères minimum)</label><input id="mot_de_passe" name="mot_de_passe" type="password" autocomplete="new-password" required minlength="8"></div>
+          <button class="btn primaire" type="submit">Créer mon compte</button>
+        </form>
+        <p class="muted">Seules les données nécessaires à la réservation sont collectées. Déjà inscrit ? <a href="connexion.html">Connexion</a></p>
+      </section>
+    </div>
+  </main>
+  <footer>RDV-MEDICAL CI — projet pédagogique MIAGE. Établissements et créneaux fictifs.</footer>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

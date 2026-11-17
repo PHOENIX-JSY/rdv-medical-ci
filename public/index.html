@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil — RDV-MEDICAL CI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="index.html">✚ RDV-MEDICAL <span>CI</span></a>
+      <nav id="nav" aria-label="Navigation principale"></nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h1>Prenez votre rendez-vous médical en ligne</h1>
+      <p>Recherchez un établissement partenaire et réservez un créneau sans vous déplacer.</p>
+      <a class="btn" href="#resultats">Rechercher</a>
+    </div>
+  </section>
+  <main>
+    <div class="container">
+
+      <div id="bienvenue" class="message succes" hidden>
+        <strong>Bienvenue <span id="bienvenue-nom"></span> !</strong>
+        Votre compte est créé. Étape suivante : recherchez un établissement ci-dessous, puis choisissez un créneau.
+      </div>
+      <section class="card" aria-labelledby="t-recherche">
+        <h2 id="t-recherche">Rechercher un établissement</h2>
+        <form id="recherche" class="search">
+          <div><label for="ville">Ville</label><select id="ville" name="ville"><option value="">Toutes les villes</option></select></div>
+          <div><label for="service">Service médical</label><select id="service" name="service"><option value="">Tous les services</option></select></div>
+          <div><label for="q">Nom de l'établissement</label><input id="q" name="q" type="search" placeholder="Hôpital ou clinique"></div>
+          <button class="btn" type="submit">Rechercher</button>
+        </form>
+      </section>
+      <section id="resultats" aria-live="polite">
+        <h2>Établissements disponibles</h2>
+        <div id="liste"></div>
+      </section>
+      <section aria-labelledby="t-comment">
+        <h2 id="t-comment">Comment ça marche ?</h2>
+        <ol class="steps">
+          <li><div class="num">1</div><strong>Créez votre compte</strong><p class="muted">Avec votre nom et votre numéro de téléphone.</p></li>
+          <li><div class="num">2</div><strong>Choisissez</strong><p class="muted">Un établissement, un service, une date et une heure.</p></li>
+          <li><div class="num">3</div><strong>Recevez votre référence</strong><p class="muted">Gardez-la et présentez-vous le jour J.</p></li>
+        </ol>
+      </section>
+    </div>
+  </main>
+  <footer>RDV-MEDICAL CI — projet pédagogique MIAGE. Établissements et créneaux fictifs.</footer>
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

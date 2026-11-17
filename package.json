@@ -1,0 +1,19 @@
+{
+  "name": "rdv-medical-ci",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prise de rendez-vous médicaux à distance en Côte d'Ivoire (PHP + SQLite, sans framework)",
+  "type": "module",
+  "scripts": {
+    "start": "php -S localhost:8000 -t public",
+    "db:init": "php database/init.php",
+    "db:reset": "php database/init.php --reset",
+    "lint": "npm run lint:js && npm run lint:php",
+    "lint:js": "eslint public/js",
+    "lint:php": "find public src database -name '*.php' -exec php -l {} \; | grep -v '^No syntax errors' || true",
+    "test": "bash tests/smoke.sh"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}

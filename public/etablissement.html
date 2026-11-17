@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Établissement — RDV-MEDICAL CI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="index.html">✚ RDV-MEDICAL <span>CI</span></a>
+      <nav id="nav" aria-label="Navigation principale"></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="card" id="infos"><p class="muted">Chargement…</p></section>
+      <section class="card">
+        <h2>Réserver un créneau</h2>
+        <p id="invite-connexion" class="message succes" hidden>Vous devrez vous <a href="connexion.html">connecter</a> ou <a href="inscription.html">créer un compte</a> pour valider.</p>
+        <div id="msg" aria-live="polite"></div>
+        <form id="reservation">
+          <div class="field"><label for="service">Service</label><select id="service" name="service" required></select></div>
+          <div class="field"><label for="date">Date</label><select id="date" name="date" required><option value="">Choisir une date</option></select></div>
+          <div class="field"><label>Heure</label><div class="slots" id="slots"></div></div>
+          <div class="field"><label for="motif">Motif général de la consultation</label><input id="motif" name="motif" maxlength="200" required placeholder="Ex. : consultation de contrôle"></div>
+          <button class="btn" type="submit">Valider la demande</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>RDV-MEDICAL CI — projet pédagogique MIAGE. Établissements et créneaux fictifs.</footer>
+  <script type="module" src="js/etablissement.js"></script>
+</body>
+</html>
